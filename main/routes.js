@@ -12,7 +12,7 @@ const init = function RoutesHandler(app) {
   });
 
   app.get('/create', (req, res)=>{
-    res.render('pages/create.ejse');
+    res.render('pages/create.ejs');
   });
 
   app.post('/signup', (req, res)=>{
