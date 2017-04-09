@@ -36,7 +36,16 @@ const init = function PassportSetup(passport) {
     passwordField: 'password',
     passReqToCallback: true
   }, (req, username, password, callback)=>{
-    
+    User.findOne({ 'email': username }, (err, user)=>{
+      if(err) {
+        return callback(err);
+      }
+      if(user) {
+        return callback(null, false);
+      } else {
+        console.log(req.body);
+      }
+    });
   }));
 }
 

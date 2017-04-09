@@ -11,6 +11,10 @@ const init = function RoutesHandler(app) {
     res.render('pages/feed.ejs');
   });
 
+  app.get('/create', (req, res)=>{
+    res.render('pages/create.ejse');
+  });
+
   app.post('/signup', (req, res)=>{
     //
   });
