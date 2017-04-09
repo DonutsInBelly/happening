@@ -1,0 +1,73 @@
+html {
+	background: url(../assets/bg_image.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+body {
+	color: #ffffff;
+	font-family: 'Source Sans Pro', sans-serif;
+	background-color: transparent !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 15px !important;
+	margin-bottom: 15px !important;
+}
+
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
+.header__title {
+	margin-top: -10px;
+	font-size: 28px;
+}
+
+.header__links {
+	margin-top: 30px !important;
+	margin-bottom: 15px !important;
+}
+
+.header__button {
+	border: 1px solid #ffffff;
+	font-size: 14px;
+	color: #ffffff;	
+	padding: 7px 10px 7px 10px;
+	margin-left: 10px;
+}
+
+.main {
+	margin-top: 50px;
+}
+
+.main__title {
+	font-size: 72px;
+}
+
+.main__description {
+	font-size: 18px;
+}
+
+.signUp {
+	margin-top: 50px;
+}
+
+input {
+	color: #303030;
+}
+
+.submit_button {
+	font-size: 18px;
+	padding: 9px 18px;
+	border: solid 1px #ffffff;
+	background-color: transparent;
+}
+
+

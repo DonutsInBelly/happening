@@ -1,0 +1,61 @@
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	background-color: #f9f9f9;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 15px !important;
+	margin-bottom: 15px !important;
+}
+
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
+.header {
+	background-color: #ffffff;
+	margin-bottom: 30px;
+}
+
+.header__title {
+	margin-top: -10px;
+	font-size: 28px;
+}
+
+.header__links {
+	margin-top: 30px !important;
+	margin-bottom: 15px !important;
+}
+
+.header__button {
+	border: 1px solid #303030;
+	font-size: 14px;
+	color: #303030;	
+	padding: 7px 10px 7px 10px;
+	margin-left: 10px;
+}
+
+.time {
+	width: 600px;
+	margin: auto;
+	font-weight: 600;
+}
+
+.feed_container {
+	padding-bottom: 10px;
+}
+
+.feed {
+	background-color: #ffffff;
+	width: 600px;
+	border: solid 1px #e0e0e0;
+	border-radius: 6px;
+	margin: auto;
+	padding: 10px;
+}
+
+
