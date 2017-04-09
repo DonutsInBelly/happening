@@ -12,23 +12,31 @@ const init = function PassportSetup(passport) {
     });
   });
 
-  passport.use(new LocalStrategy({
-    usernameField: 'email',
+  passport.use('local-login', new LocalStrategy({
+    usernameField: 'username',
     passwordField: 'password',
     passReqToCallback: true
-  }, (req, username, password, done)=>{
-    User.findOne({ 'email': email }, (err, user)=>{
+  }, (req, username, password, callback)=>{
+    User.findOne({ 'email': username }, (err, user)=>{
       if(err) {
-        return done(err);
+        return callback(err);
       }
       if(!user) {
-          return done(null, false);
+          return callback(null, false);
       }
       if(!user.check(password)) {
-        return done(null, false);
+        return callback(null, false);
       }
-      return done(null, user);
+      return callback(null, user);
     });
+  }));
+
+  passport.use('local-signup', new LocalStrategy({
+    usernameField: 'username',
+    passwordField: 'password',
+    passReqToCallback: true
+  }, (req, username, password, callback)=>{
+    
   }));
 }
 
