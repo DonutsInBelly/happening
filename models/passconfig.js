@@ -1,17 +1,33 @@
 const LocalStrategy = require('passport-local').Strategy;
+const User          = require('./user.js');
 
 const init = function PassportSetup(passport) {
   passport.serializeUser((user, callback)=>{
 
   });
 
-  passport.deserializeUser((id, callback)=>{
+  passport.deserializeUser((uid, callback)=>{
     // DB Lookup
   });
 
   passport.use(new LocalStrategy({
-    // lmao
+    usernameField: 'email',
+    passwordField: 'password',
+    passReqToCallback: true
+  }, (req, username, password, done)=>{
+    User.findOne({ 'email': email }, (err, user)=>{
+      if(err) {
+        return done(err);
+      }
+      if(!user) {
+          return done(null, false);
+      }
+      if(!user.check(password)) {
+        return done(null, false);
+      }
+      return done(null, user);
+    });
   }));
 }
 
-model.exports = init;
+module.exports = init;
