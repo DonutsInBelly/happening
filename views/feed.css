@@ -39,6 +39,29 @@ h1, h2, h3, h4, h5, h6 {
 	margin-left: 10px;
 }
 
+.friend_search {
+	border: 0px;
+	width: 400px;
+	margin: auto;
+	border-bottom: 1px solid #202020;
+}
+
+.submit_button {
+	float: right;
+	font-size: 26px;
+	color: #ffffff;
+	background-color: #e74c3c;
+	border-radius: 100px;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+}
+
+.submit_plus {
+	font-weight: 700;
+}
+
 .time {
 	width: 600px;
 	margin: auto;
