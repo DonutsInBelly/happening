@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<!-- ../partials/head.ejs -->
+	<%- include ../partials/head.ejs %>
 </head>
 <body>
-	
-<!-- ../partials/header.ejs -->
+
+<%- include ../partials/header.ejs %>
 
 <div class="signUp">
 	<div class="container">
@@ -14,12 +14,12 @@
 				<div>LOG IN</div>
 			</div>
 		</div>
-		<form>
+		<form action="/login" method="post">
 		<div class="row">
 			<div class="col-md-4">
 					<div class="form-group">
 						<label for="inputEmail">Email Address</label>
-						<input type="email" class="form-control" id="inputEmail" placeholder="E-mail"></input>
+						<input name="email" type="email" class="form-control" id="inputEmail" placeholder="E-mail"></input>
 					</div>
 			</div>
 		</div>
@@ -27,16 +27,16 @@
 			<div class="col-md-4">
 					<div class="form-group">
 						<label for="inputPassword">Password</label>
-						<input type="Password" class="form-control" id="inputPassword" placeholder="Password"></input>
+						<input name="password" type="Password" class="form-control" id="inputPassword" placeholder="Password"></input>
 					</div>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-md-4">
-				<button class="submit_button" type="submit">Log In</button>		
+				<button class="submit_button" type="submit">Log In</button>
 			</div>
 		</div>
-	</form>	
+	</form>
 	</div>
 </div>
 </body>

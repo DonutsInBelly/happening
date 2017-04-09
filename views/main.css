@@ -1,5 +1,5 @@
 html {
-	background: url(../assets/bg_image.jpg) no-repeat center center fixed;
+	background: url(./assets/bg_image.jpg) no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -38,7 +38,7 @@ h1, h2, h3, h4, h5, h6 {
 .header__button {
 	border: 1px solid #ffffff;
 	font-size: 14px;
-	color: #ffffff;	
+	color: #ffffff;
 	padding: 7px 10px 7px 10px;
 	margin-left: 10px;
 }
@@ -69,5 +69,3 @@ input {
 	border: solid 1px #ffffff;
 	background-color: transparent;
 }
-
-
