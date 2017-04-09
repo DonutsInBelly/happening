@@ -3,11 +3,13 @@ const User          = require('./user.js');
 
 const init = function PassportSetup(passport) {
   passport.serializeUser((user, callback)=>{
-
+    callback(null, user.uid)
   });
 
   passport.deserializeUser((uid, callback)=>{
-    // DB Lookup
+    User.findOne({ '_id': _id }, (err, user)=>{
+      callback(err, user);
+    });
   });
 
   passport.use(new LocalStrategy({
