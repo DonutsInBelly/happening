@@ -26,38 +26,78 @@
 			</div>
 			<div class="col-md-3 header__links">
 				<div>
-					<a class="header__button" href="/create" role="button">LOG OUT</a>
+					<a class="header__button" href="/" role="button">LOG OUT</a>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
 
-<div class="feedWrapper">
+
+<div class="createEvent">
 	<div class="container">
-
-		<div class="row create_button">
-			<div class="col-md-1 col-md-offset-8">
-				<a href="/">
-					<div class="submit_button">
-						<p class="submit_plus">	+ </p>
+		<div class="row">
+			<div class="col-md-4">
+				<div><h3>Create an Event</h3></div>
+			</div>
+		</div>
+		<form action="/create" method="post">
+		<div class="row">
+			<div class="col-md-4">
+					<div class="form-group">
+						<label for="inputTitle">Title</label>
+						<input name="title" type="text" class="form-control" id="inputTitle" placeholder="Title"></input>
 					</div>
-				</a>
 			</div>
 		</div>
-
-		<div class="row event_container">
-			<div class="col-md-12 text-left">
-				<div class="time">
-					<h2>11:00AM</h2>
-				</div>
-				<%- include ../partials/event.ejs %>
+		<div class="row">
+			<div class="col-md-4">
+					<div class="form-group">
+						<label for="inputStartTime">Start Time</label>
+						<input name="startTime" type="text" class="form-control" id="inputStartTime" placeholder="Start Time"></input>
+					</div>
 			</div>
-
 		</div>
+		<div class="row">
+			<div class="col-md-4">
+					<div class="form-group">
+						<label for="inputEndTime">End Time</label>
+						<input name="endTime" type="text" class="form-control" id="inputEndTime" placeholder="End Time"></input>
+					</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+					<div class="form-group">
+						<label for="inputDescription">Description</label>
+						<textarea name="description" type="text" class="form-control" id="inputDescription" placeholder="Description"></textarea>
+					</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+					<div class="form-group">
+						<label for="inputLocation">Location</label>
+						<input name="location" type="text" class="form-control" id="inputLocation" placeholder="Location"></input>
+					</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+					<div class="form-group">
+						<label for="inputTags">Tags</label>
+						<input name="tags" type="text" class="form-control" id="inputTags" placeholder="Tags"></input>
+					</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<input class="submit_form header__button" type="submit"></input>
+			</div>
+		</div>
+	</form>
 	</div>
 </div>
-
 
 </body>
 </html>
