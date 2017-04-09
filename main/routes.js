@@ -6,6 +6,14 @@ const init = function RoutesHandler(app) {
   app.get('/login', (req, res)=>{
     res.render('pages/login.ejs');
   });
+
+  app.get('/feed', (req, res)=>{
+    res.render('pages/feed.ejs');
+  });
+
+  app.post('/signup', (req, res)=>{
+    //
+  });
 }
 
 module.exports = init;
