@@ -1,4 +1,4 @@
-const init = function RoutesHandler(app) {
+const init = function RoutesHandler(app, passport) {
   app.get('/', (req, res)=>{
     res.render('pages/main.ejs');
   });
@@ -15,9 +15,10 @@ const init = function RoutesHandler(app) {
     res.render('pages/create.ejs');
   });
 
-  app.post('/signup', (req, res)=>{
-    //
-  });
+  app.post('/signup', passport.authenticate('local-signup', {
+    successRedirect: '/feed',
+    failureRedirect: '/'
+  }));
 }
 
 module.exports = init;

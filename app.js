@@ -31,7 +31,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-routes(app);
+routes(app, passport);
 
 app.listen(port);
 console.log('Listening on port %d', port);
